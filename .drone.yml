@@ -13,14 +13,3 @@ steps:
     commands:
       - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
       - mvn test -B
-  - name: notify-failure
-    image: alpine
-    commands:
-      - echo Build failed
-    when:
-      status:
-        - failure
-  - name: notify-success
-    image: alpine
-    commands:
-      - echo Build success
