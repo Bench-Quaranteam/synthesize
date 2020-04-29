@@ -13,6 +13,6 @@ public class Controller {
 
     @GetMapping
     public int getNumber() {
-        return 12345;
+        return 1234;
     }
 }

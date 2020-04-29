@@ -15,6 +15,6 @@ public class ControllerTests {
 
     @Test
     public void testGetNumber() {
-        assertEquals(12345, controller.getNumber());
+        assertEquals(1234, controller.getNumber());
     }
 }
