@@ -1,0 +1,15 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: greeting
+    image: alpine
+    commands:
+      - echo hello
+      - echo world
+  - name: test
+    image: maven:3-jdk-11
+    commands:
+      - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+      - mvn test -B
