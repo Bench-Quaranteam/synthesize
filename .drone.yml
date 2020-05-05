@@ -15,8 +15,9 @@ steps:
       - mvn test -B
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
-    environment:
-      SONAR_HOST:
+    settings:
+      sonar_host:
         from_secret: sonar_host
-      SONAR_TOKEN:
+      sonar_token:
         from_secret: sonar_token
+      ver: 1.0
