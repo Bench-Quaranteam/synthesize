@@ -14,9 +14,10 @@ steps:
       - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
       - mvn test -B
   - name: code-analysis
-    image: aosapps/drone-sonar-plugin:1.0
-    environment:
-      SONAR_HOST:
+    image: aosapps/drone-sonar-plugin
+    settings:
+      sonar_host:
         from_secret: sonar_host
-      SONAR_TOKEN:
+      sonar_token:
         from_secret: sonar_token
+
