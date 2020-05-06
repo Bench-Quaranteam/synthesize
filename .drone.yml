@@ -10,15 +10,13 @@ steps:
   - name: build
     image: maven:3-jdk-11
     commands:
-      - mvn -e -ntp -B clean |
-      - mvn -e -ntp -B compile
+      - mvn -ntp -B clean
+      - mvn -ntp -B compile
   - name: test
     image: maven:3-jdk-11
     commands:
-      - mvn -e -ntp install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-      - mvn -e -ntp test -B
-      - echo Deleting tests before running code analysis
-      - rm -R src/test
+      - mvn -ntp install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+      - mvn -ntp test -B
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
     settings:
