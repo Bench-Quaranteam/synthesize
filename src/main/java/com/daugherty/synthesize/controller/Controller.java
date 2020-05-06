@@ -17,7 +17,7 @@ public class Controller {
     }
 
     @GetMapping
-    public int getNegativeNumber() {
+    public int getNegativeInteger() {
         return -3;
     }
 }
