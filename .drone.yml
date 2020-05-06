@@ -8,6 +8,10 @@ steps:
     commands:
       - echo hello
       - echo world
+  - name: build
+    image: maven:3-jdk-11
+    commands:
+      - mvn clean compile
   - name: test
     image: maven:3-jdk-11
     commands:
