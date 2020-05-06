@@ -23,6 +23,7 @@ secrets.json
 /nbproject/private/
 /nbbuild/
 /dist/
+target/
 /nbdist/
 /.nb-gradle/
 build/
