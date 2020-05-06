@@ -18,6 +18,9 @@ steps:
       - mvn test -B
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
+    commands:
+      - echo Deletin test folder before doing SonarQube analysis
+      - rm -R src/test
     settings:
       sonar_host:
         from_secret: sonar_host
