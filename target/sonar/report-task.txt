@@ -1,0 +1,6 @@
+projectKey=Synthesize
+serverUrl=http://10.0.0.81:9000
+serverVersion=8.3.0.34182
+dashboardUrl=http://10.0.0.81:9000/dashboard?id=Synthesize
+ceTaskId=AXHqbzHNEIfQoeqWWY2m
+ceTaskUrl=http://10.0.0.81:9000/api/ce/task?id=AXHqbzHNEIfQoeqWWY2m
