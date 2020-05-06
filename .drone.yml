@@ -15,7 +15,7 @@ steps:
     image: maven:3-jdk-11
     commands:
       - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-      - mvn test -B
+      - mvn -q test -B
       - echo Deleting tests before running code analysis
       - rm -R src/test
   - name: code-analysis
