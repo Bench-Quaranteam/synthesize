@@ -10,8 +10,8 @@ steps:
   - name: build
     image: maven:3-jdk-11
     commands:
-      - mvn -e -B clean
-      - mvn -e -B compile
+      - mvn -e -ntp -B clean |
+      - mvn -e -ntp -B compile
   - name: test
     image: maven:3-jdk-11
     commands:
