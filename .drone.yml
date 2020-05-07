@@ -28,9 +28,9 @@ steps:
     when:
       event:
         - push
-  -name: release
-   image: plugins/github-release
-   settings:
-     api_key:
-       from_secret: github_token
-     files: target/synthesize-0.0.1-SNAPSHOT.jar
+  - name: release
+    image: plugins/github-release
+    settings:
+      api_key:
+        from_secret: github_token
+    files: target/synthesize-0.0.1-SNAPSHOT.jar
