@@ -33,6 +33,6 @@ steps:
     settings:
       api_key:
         from_secret: github_token
-    files: target/synthesize-0.0.1-SNAPSHOT.jar
+      files: target/*.jar
     when:
       event: tag
