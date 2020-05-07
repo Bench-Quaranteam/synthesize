@@ -17,6 +17,8 @@ steps:
     commands:
       - mvn -ntp install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
       - mvn -ntp test -B
+#     Since Jacoco is running our coverage reports for us, remove Test files before sending to sonar
+      - rm -R src/test
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
     settings:
