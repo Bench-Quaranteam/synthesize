@@ -1,3 +1,1 @@
 # synthesize
-
-HELLO WORLD
