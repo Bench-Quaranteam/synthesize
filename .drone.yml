@@ -17,17 +17,17 @@ steps:
     commands:
       - mvn -ntp install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
       - mvn -ntp test -B
-#  - name: code-analysis
-#    image: aosapps/drone-sonar-plugin
-#    settings:
-#      sonar_host:
-#        from_secret: sonar_host
-#      sonar_token:
-#        from_secret: sonar_token
+  - name: code-analysis
+    image: aosapps/drone-sonar-plugin
+    settings:
+      sonar_host:
+        from_secret: sonar_host
+      sonar_token:
+        from_secret: sonar_token
 #   SonarQube can't handle Pull Requests unless we get a fancier version, I think
-#    when:
-#      event:
-#        - push
+    when:
+      event:
+        - push
   - name: release
     image: plugins/github-release
     settings:
