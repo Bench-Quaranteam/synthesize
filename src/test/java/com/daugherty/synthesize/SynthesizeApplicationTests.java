@@ -8,6 +8,7 @@ class SynthesizeApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// Default spring test. Adding comment so SonarQube will stop yelling at me.
 	}
 
 }

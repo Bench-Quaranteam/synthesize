@@ -11,8 +11,13 @@ public class Controller {
         return input;
     }
 
-    @GetMapping
+    @GetMapping("/getNumber")
     public int getNumber() {
         return 123;
+    }
+
+    @GetMapping("/getNegativeInteger")
+    public int getNegativeInteger() {
+        return -3;
     }
 }
